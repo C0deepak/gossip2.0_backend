@@ -1,7 +1,7 @@
-import asyncHandler from 'express-async-handler'
 import jwt from 'jsonwebtoken'
+import expressAsyncHandler from 'express-async-handler'
 
-export const isAuthenticated = asyncHandler(async (req, res, next) => {
+export const isAuthenticated = expressAsyncHandler(async (req, res, next) => {
     const token = req.cookies['gossip-token']
     if (!token) {
         res.status(400)

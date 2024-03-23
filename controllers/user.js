@@ -1,9 +1,9 @@
-import asyncHandler from 'express-async-handler'
 import User from '../models/user.js'
 import { sendToken } from '../utils/sendToken.js'
 import bcrypt from 'bcrypt'
+import expressAsyncHandler from 'express-async-handler'
 
-export const registerUser = asyncHandler(async (req, res) => {
+export const registerUser = expressAsyncHandler(async (req, res) => {
     const { name, username, password } = req.body
 
     // Just for backend only once connected to frontend then will be fetched from frontend and cloudinary only
@@ -32,7 +32,7 @@ export const registerUser = asyncHandler(async (req, res) => {
     }
 })
 
-export const loginUser = asyncHandler(async (req, res) => {
+export const loginUser = expressAsyncHandler(async (req, res) => {
     const { username, password } = req.body
 
     if (!username || !password) {
@@ -54,7 +54,7 @@ export const loginUser = asyncHandler(async (req, res) => {
     }
 })
 
-export const myProfile = asyncHandler(async (req, res) => {
+export const myProfile = expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.user)
     res.status(200).json({
         success: true,
