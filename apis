@@ -1,0 +1,30 @@
+[*] Users APIs
+[+] Login
+[+] Register
+[+] Logout
+[+] Search User
+[+] Send Request
+[+] Push Notification that is someone is requested but api will not be made but it will be done with socket
+[+] To get users Notification
+[+] Accept / Reject
+[+] Get my Friends to create group
+
+[*] Chat APIs
+[+] Send text message (not done by apis) but done by socket
+[+] Send Attachments
+[+] Get My Chats
+[+] Create group
+[+] Get Group/Chat details
+[+] Delete Group/Chat
+[+] Add member to group
+[+] Remove member from group
+[+] Leave Group
+[+] Get all messages //complex since infinite loading...
+
+[*] Admin APIs
+[+] Admin Login
+[+] Admin Logout
+[+] Admin Dashboard data
+    [+] Get all users
+    [+] Get all Messages
+    [+] Get all Groups
